@@ -1,0 +1,232 @@
+*{
+    
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Montserrat',Tahoma, Verdana, Geneva, sans-serif;
+    color: rgb(200, 200, 244);
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------- */
+/* header */
+
+body{
+    background: linear-gradient(to bottom right, rgb(40, 140, 173), rgb(43, 43, 185), rgb(40, 140, 173));
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    display: grid;
+    grid-template-rows: 12% 76% 12%;
+}
+
+header{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255,255,255,0.05);
+    grid-row: 1;
+}
+
+.tituloPagina h1{
+    font-size: 1.5em;
+    margin: 10px auto;
+}
+
+.tituloPagina h2{
+    font-size: 0.9em;
+    margin: 10px auto;
+}
+
+/* --------------------------------------------- */
+/* main */
+
+main{
+    grid-row: 2;
+}
+
+label{
+    width: 100%;
+    display: block;
+}
+
+.ingresoTexto, .resultado{
+    text-align: center;
+    margin: 2px auto;
+    padding: 10px;
+}
+
+.encriptado-vacio{
+    background-size: auto 70%;
+    background-repeat:no-repeat;
+    background-image: url(../img/Muñeco.png);
+    background-position: center 70%;
+}
+
+.areaTexto{
+    margin: 7px auto;
+    border-radius: 10px;
+    text-align: left;
+    padding: 5px;
+    width: 90%;
+    color: rgb(18, 4, 93);
+    font-weight: bold;
+    background-color: rgb(200, 200, 244);
+    resize: vertical;
+    height:fit-content;
+    border: 7px double rgb(18, 4, 93);
+    box-shadow: 10px 10px 10px -1px black;
+}
+
+.areaTexto:focus{
+    border-color: rgb(18, 4, 93); 
+}
+
+.areaTexto:hover{
+    border-color: rgb(18, 4, 93);
+    background-color: rgb(255, 255, 244);
+}
+
+.botones {
+    width: 50%;
+    border: 1px solid rgb(40, 140, 173);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(18, 4, 93);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: background-color 15ms linear, box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+  
+.botones:hover {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: rgb(43, 43, 185);
+    cursor: pointer;
+}
+
+#ventana-dialogo::backdrop {
+    background: rgba(0,0,0,.4);
+    backdrop-filter: blur(3px);
+}
+
+#ventana-dialogo {
+    border: 7px double rgb(18, 4, 93);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 10px -1px black;
+    background-color: rgb(40, 140, 173);
+    
+}
+
+.mensaje-ventana{
+      font-size: 1em;
+      color: white;
+      z-index: 999;
+}
+
+/* --------------------------------------------- */
+/* footer */
+
+footer{
+    grid-row: 3;
+    background-color: rgba(255,255,255,0.2);
+    padding: 10px;
+}
+
+.iconos{
+    margin: auto 5px;
+}
+
+footer p{
+    margin: 2px auto;
+    font-size: 0.9em;
+    color: black;
+    font-weight: bold;
+}
+
+/* --------------------------------------------- */
+/* Responsive para Tablet */
+
+@media screen and (min-width: 480px){
+
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+    }
+
+    .imagenLogo{
+        margin: 1% 2% 1% 6%;
+    }
+
+    .tituloPagina{
+        display: flex;
+        align-items:center;
+        width: 90%;
+    }
+
+    .tituloPagina h1, .tituloPagina h2{
+        margin: 2% 0;
+        height: 100%;
+        text-align: justify;
+    }
+
+    .tituloPagina h2{
+        margin-left: 2%;
+        font-size: 1.5em;
+    }
+
+    .botones{
+        width: 40%;
+    }
+}
+
+/* --------------------------------------------- */
+/* Responsive para Monitor */
+
+@media screen and (min-width: 1024px){
+
+    *{
+        font-size: 16px;
+    }
+
+    main{
+        display: flex;
+        font-size: 1.5em;
+    }
+
+    .tituloPagina{
+        font-size: 1.3em;
+    }
+
+    .ingresoTexto{
+        width: 60%;
+        height: 100%;
+    }
+
+    .resultado{
+        width: 45%;
+        height: 100%;
+    }
+
+    textarea{
+        font-size: 1em;
+    }
+
+    .areaTexto{
+        height: 80%;
+    }
+
+    .botones{
+        font-size: 1em;
+    }
+
+}
